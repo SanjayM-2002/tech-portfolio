@@ -1,6 +1,6 @@
 'use client';
 import Brain from '@/components/brain';
-import SkillsCard from '@/components/skillCard';
+
 import { motion, useInView, useScroll } from 'framer-motion';
 import Image from 'next/image';
 import { useRef } from 'react';
@@ -189,7 +189,7 @@ const AboutPage = () => {
               ></path>
             </motion.svg>
           </div>
-          <div>{/* <SkillsCard /> */}</div>
+
           {/* EXPERIENCE CONTAINER */}
           <div
             className='flex flex-col gap-12 justify-center pb-48'
