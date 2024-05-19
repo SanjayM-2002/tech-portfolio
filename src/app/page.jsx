@@ -2,8 +2,10 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 const Homepage = () => {
+  const router = useRouter();
   return (
     <motion.div
       className='h-full'
@@ -42,7 +44,10 @@ const Homepage = () => {
             >
               View My Resume
             </button>
-            <button className='p-4 rounded-lg ring-1 ring-black'>
+            <button
+              className='p-4 rounded-lg ring-1 ring-black'
+              onClick={() => router.push('/contact')}
+            >
               Contact Me
             </button>
           </div>

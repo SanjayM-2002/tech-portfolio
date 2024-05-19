@@ -2,6 +2,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useRef } from 'react';
 
 const items = [
@@ -99,6 +100,7 @@ const keyWords = [
 
 const PortfolioPage = () => {
   const ref = useRef();
+  const router = useRouter();
 
   const { scrollYProgress } = useScroll({ target: ref });
   const x = useTransform(scrollYProgress, [0, 1], ['0%', '-83%']);
@@ -185,12 +187,12 @@ const PortfolioPage = () => {
               </textPath>
             </text>
           </motion.svg>
-          <Link
-            href='/contact'
-            className='w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center'
+          <button
+            className='w-28 h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center cursor-pointer'
+            onClick={() => router.push('/contact')}
           >
             Hire Me
-          </Link>
+          </button>
         </div>
       </div>
     </motion.div>
