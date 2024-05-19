@@ -117,7 +117,7 @@ const Navbar = () => {
         <button
           onClick={() =>
             window.open(
-              'https://drive.google.com/file/d/1EAM-DkUL_0eSf4b9IAPkUNLq6qIHRjwx/view?usp=drive_link',
+              'https://drive.google.com/file/d/15Jlyuq7FpIHj4m-FNnIBQTQ1LCCCPoE_/view?usp=drive_link',
               '_blank'
             )
           }
