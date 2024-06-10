@@ -24,6 +24,36 @@ const items = [
   {
     id: 2,
     color: 'from-blue-300 to-violet-300',
+    title: 'Huddle',
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.',
+    img: 'https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load',
+    link: 'https://github.com/SanjayM-2002/ChessApp/tree/master',
+    liveLink: 'https://huddle-nu-ochre.vercel.app/',
+    points: [
+      'Developed a video conferencing application, providing users with a seamless experience for conducting virtual meetings',
+      'Utilized Next.js and TypeScript along with Shadcn and TailwindCSS for responsive and modern UI design',
+      'Integrated Clerk for secure user authentication, supporting social sign-in and traditional email/password methods, while managing user access levels and permissions within the platform',
+      'Leveraged GetStream SDK for video conferencing and implemented features like instant meetings, scheduled meetings, and viewing past meetings.',
+    ],
+  },
+  {
+    id: 3,
+    color: 'from-blue-300 to-violet-300',
+    title: 'B4Blog',
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.',
+    img: 'https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load',
+    link: 'https://github.com/SanjayM-2002/ChessApp/tree/master',
+    liveLink: 'https://b4blog.vercel.app/',
+    points: [
+      'Crafted a modern blogging application designed to empower users to share their ideas and stories with the world',
+      'Utilized Cloudflare Workers with Hono framework for a scalable and performant backend, and PostgreSQL for database',
+      'Used React.js and TypeScript for a robust and efficient frontend, integrating Zod for validation and type inference to ensure data integrity and type safety',
+      'Incorporated JWT for secure authentication and optimized database operations with Prisma connection pooling',
+    ],
+  },
+  {
+    id: 4,
+    color: 'from-blue-300 to-violet-300',
     title: 'Chess App',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.',
     img: 'https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load',
@@ -36,7 +66,7 @@ const items = [
     ],
   },
   {
-    id: 3,
+    id: 5,
     color: 'from-violet-300 to-purple-300',
     title: 'Chat App',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.',
@@ -50,7 +80,7 @@ const items = [
     ],
   },
   {
-    id: 4,
+    id: 6,
     color: 'from-purple-300 to-red-300',
     title: 'Doc App',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.',
@@ -65,7 +95,7 @@ const items = [
     ],
   },
   {
-    id: 5,
+    id: 7,
     color: 'from-purple-300 to-red-300',
     title: 'Peer Connect',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.',
@@ -89,6 +119,7 @@ const keyWords = [
   'Express.js',
   'Cloudinary',
   'Redux',
+  'Recoil',
   'MongoDB',
   'PostgreSQL',
   'WebSocket',
@@ -96,6 +127,18 @@ const keyWords = [
   'WebRTC',
   'Redis',
   'Kafka',
+  'Clerk',
+  'Shadcn',
+  'TailwindCSS',
+  'GetStream',
+  'SDK',
+  'Cloudflare',
+  'Workers',
+  'Hono',
+  'Prisma',
+  'Zod',
+  'JWT',
+  'chess.js',
 ];
 
 const PortfolioPage = () => {
@@ -103,7 +146,7 @@ const PortfolioPage = () => {
   const router = useRouter();
 
   const { scrollYProgress } = useScroll({ target: ref });
-  const x = useTransform(scrollYProgress, [0, 1], ['0%', '-83%']);
+  const x = useTransform(scrollYProgress, [0, 1], ['0%', '-87%']);
 
   const highlightKeywords = (text) => {
     return text.split(' ').map((word, index) => {
@@ -159,6 +202,14 @@ const PortfolioPage = () => {
                     >
                       Source Code
                     </button>
+                    {item.liveLink && (
+                      <button
+                        className='py-2 px-8 text-sm md:p-4 md:px-8 md:text-md lg:p-8 lg:px-16 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded'
+                        onClick={() => window.open(item.liveLink, '_blank')}
+                      >
+                        Live
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
