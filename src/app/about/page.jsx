@@ -25,6 +25,61 @@ const AboutPage = () => {
     others: ['Git', 'Docker', 'AWS', 'Postman'],
   };
 
+  const workDetails = [
+    {
+      id: 1,
+      detail:
+        'Spearheaded the design and development of two fintech applications, including a Digital Will app and a Portfolio Review platform, using React Native',
+    },
+    {
+      id: 2,
+      detail:
+        'Utilized React Native Paper to craft multiple intuitive screens and forms for user onboarding, personal details, beneficiary information, and asset and liability details, ensuring seamless user interaction',
+    },
+    {
+      id: 3,
+      detail:
+        'Leveraged React Native Chart kit to provide user-friendly analysis and insights of user portfolios, utilizing various plots and visualizations to enhance user understanding and engagement across multiple parameters',
+    },
+    {
+      id: 4,
+      detail:
+        'Addressed and resolved 40% of frontend bugs promptly, improving application quality and stability',
+    },
+  ];
+
+  const keyWords = [
+    'Digital',
+    'Will',
+    'app',
+    'Portfolio',
+    'Review',
+    'platform',
+    'React',
+    'Native',
+    'Paper',
+    'Chart',
+    'kit',
+    'resolved',
+    '40%',
+    'frontend',
+    'bugs',
+  ];
+
+  const highlightKeywords = (text) => {
+    return text.split(' ').map((word, index) => {
+      const cleanWord = word.replace(/[,]/g, ''); // Remove punctuation
+      if (keyWords.includes(cleanWord)) {
+        return (
+          <span key={index} className=' font-extrabold italic text-red-400'>
+            {word}{' '}
+          </span>
+        );
+      }
+      return <span key={index}>{word} </span>;
+    });
+  };
+
   return (
     <motion.div
       className='h-full'
@@ -223,24 +278,36 @@ const AboutPage = () => {
                   </div>
                   {/* JOB DESC */}
                   <div className='p-1 text-sm italic'>
-                    <p>
+                    {workDetails.map((point, index) => (
+                      <div key={index}>
+                        <p>{highlightKeywords(point.detail)}</p>
+                        <br />
+                      </div>
+                    ))}
+                    {/* <p>
                       Spearheaded the design and development of two fintech
                       applications, including a Digital Will app and a Portfolio
-                      Review platform, utilizing React Native for frontend
-                      development
+                      Review platform, using React Native
                     </p>
                     <br />
                     <p>
-                      Crafted multiple intuitive screens and forms covering user
-                      onboarding, personal details, beneficiary information,
-                      asset and liability details, ensuring seamless user
-                      interaction
+                      Utilized React Native Paper to craft multiple intuitive
+                      screens and forms for user onboarding, personal details,
+                      beneficiary information, and asset and liability details,
+                      ensuring seamless user interaction
+                    </p>
+                    <br />
+                    <p>
+                      Leveraged React Native Chart kit to provide user-friendly
+                      analysis and insights of user portfolios, utilizing
+                      various plots and visualizations to enhance user
+                      understanding and engagement across multiple parameters
                     </p>
                     <br />
                     <p>
                       Addressed and resolved 40% of frontend bugs promptly,
                       improving application quality and stability
-                    </p>
+                    </p> */}
                   </div>
                 </div>
                 {/* CENTER */}
