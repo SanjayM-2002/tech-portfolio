@@ -37,7 +37,7 @@ const Homepage = () => {
               className='p-4 rounded-lg ring-1 ring-black bg-black text-white'
               onClick={() =>
                 window.open(
-                  'https://drive.google.com/file/d/1P7iHeuWzAHsEVlWa9b2qDr097s6vx8Hp/view?usp=drive_link',
+                  'https://drive.google.com/file/d/1Nc-Xptw1HRfiIvS-u7G6gD9NuFYKDLZM/view?usp=drive_link',
                   '_blank'
                 )
               }

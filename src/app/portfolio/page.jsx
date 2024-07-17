@@ -27,7 +27,7 @@ const items = [
     title: 'Huddle',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.',
     img: 'https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load',
-    link: 'https://github.com/SanjayM-2002/ChessApp/tree/master',
+    link: 'https://github.com/SanjayM-2002/huddle',
     liveLink: 'https://huddle-nu-ochre.vercel.app/',
     points: [
       'Developed a video conferencing application, providing users with a seamless experience for conducting virtual meetings',
@@ -42,7 +42,7 @@ const items = [
     title: 'B4Blog',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.',
     img: 'https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load',
-    link: 'https://github.com/SanjayM-2002/ChessApp/tree/master',
+    link: 'https://github.com/SanjayM-2002/b4blog',
     liveLink: 'https://b4blog.vercel.app/',
     points: [
       'Crafted a modern blogging application designed to empower users to share their ideas and stories with the world',
